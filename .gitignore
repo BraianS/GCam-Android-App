@@ -1,0 +1,34 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# Build Artifacts
+/build/
+/app/build/
+.gradle/
+/out/
+
+# Local Configuration
+local.properties
+.DS_Store
+
+# Android Studio - cache and debug files
+captures/
+externalNativeBuild/
+lint-results.xml
+lint-results.html
+logcat.txt
+crashlytics-build.properties
+app/src/main/assets/google-services.json # Exemplo de localização
+app/google-services.json
+app/*.keystore
+app/*.jks
+
+# Secrets (Chaves de Assinatura e APIs)
+# Mantenha os arquivos de Keystore e Secrets properties privados
+*.jks
+*.keystore
+secrets.properties
