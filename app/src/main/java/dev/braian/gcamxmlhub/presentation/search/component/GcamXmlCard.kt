@@ -88,7 +88,7 @@ fun GCamXmlCard(xml: GcamXml) {
                         color = MaterialTheme.colorScheme.tertiary, // Cor desejada
                         fontWeight = FontWeight.SemiBold
                     )) {
-                        append(xml.author)
+                        append(xml.user.name)
                     }
 
                     // Separador e Versão da GCam
@@ -189,7 +189,14 @@ fun GcamXmlCardPreview() {
         id = "1",
         title = "Ultra HDR V7",
         description = "Configuração perfeita para fotos com alta faixa dinâmica e cores vibrantes. Ideal para ambientes externos.",
-        author = "DarkVader",
+        user = dev.braian.gcamxmlhub.data.model.User(
+            id = "1",
+            name = "Expert Review",
+            role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+            subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+            ),
         date = "2025-10-01",
         likes = 952,
         type = ContentType.XML,

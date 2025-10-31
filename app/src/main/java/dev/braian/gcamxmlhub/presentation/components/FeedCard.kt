@@ -41,7 +41,7 @@ import dev.braian.gcamxmlhub.data.model.FeedContent
 import dev.braian.gcamxmlhub.ui.theme.GcamXMLHubTheme
 
 @Composable
-fun FeedCard(content: FeedContent) {
+fun FeedCard( content: FeedContent) {
 
     val typeColor = when (content.type) {
         ContentType.REVIEW -> Color(0xFFFFA000)
@@ -125,7 +125,7 @@ fun FeedCard(content: FeedContent) {
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Text(
-                        text = "por ${content.author}",
+                        text = "por ${content.user.name}",
                         style = MaterialTheme.typography.labelSmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
@@ -167,11 +167,18 @@ fun FeedCardPreview() {
                 id = "1",
                 title = "Review Completo: LMC Camera",
                 description = "Análise detalhada da versão R15 desenvolvida por Hasli",
-                author = "TechReview Team",
                 date = "15/03/2024",
                 imageUrl = "https://picsum.photos/400/200?random=1&grayscale",
                 likes = 156,
-                type = ContentType.REVIEW
+                type = ContentType.REVIEW,
+                user = dev.braian.gcamxmlhub.data.model.User(
+                    id = "1",
+                    name = "Expert Review",
+                    role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                    subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                )
             )
         )
     }
@@ -187,7 +194,14 @@ fun AllContentTypesPreviewAlternative() {
                     id = "1",
                     title = "Review Completo",
                     description = "Análise detalhada da última versão",
-                    author = "Expert Review",
+                    user = dev.braian.gcamxmlhub.data.model.User(
+                        id = "1",
+                        name = "Expert Review",
+                        role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                        subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                        ),
                     date = "15/03/2024",
                     likes = 156,
                     imageUrl = "https://picsum.photos/400/200?random=1&grayscale",
@@ -200,7 +214,14 @@ fun AllContentTypesPreviewAlternative() {
                     id = "2",
                     title = "Tutorial Completo",
                     description = "Aprenda todas as configurações",
-                    author = "Tutorial Master",
+                    user = dev.braian.gcamxmlhub.data.model.User(
+                        id = "1",
+                        name = "Expert Review",
+                        role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                        subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                        ),
                     date = "12/03/2024",
                     likes = 89,
                     imageUrl = "https://picsum.photos/400/200?random=2",
@@ -213,7 +234,14 @@ fun AllContentTypesPreviewAlternative() {
                     id = "3",
                     title = "Análise Comparativa",
                     description = "Compare as melhores GCams",
-                    author = "Analysis Pro",
+                    user = dev.braian.gcamxmlhub.data.model.User(
+                        id = "1",
+                        name = "Expert Review",
+                        role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                        subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                        ),
                     date = "08/03/2024",
                     likes = 204,
                     imageUrl = "https://picsum.photos/400/200?random=3",

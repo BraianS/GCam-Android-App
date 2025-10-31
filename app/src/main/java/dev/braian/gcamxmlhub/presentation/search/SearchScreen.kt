@@ -43,7 +43,14 @@ fun getFeedContentForGCam(gcam: GCamNames): List<FeedContent> {
             id = "1",
             title = "Review: ${gcam.name}",
             description = "Análise completa da versão ${gcam.version} desenvolvida por ${gcam.developer}",
-            author = gcam.developer,
+            user = dev.braian.gcamxmlhub.data.model.User(
+                id = "1",
+                name = "Expert Review",
+                role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                ),
             date = "15/03/2024",
             likes = 142,
 
@@ -53,7 +60,14 @@ fun getFeedContentForGCam(gcam: GCamNames): List<FeedContent> {
             id = "2",
             title = "Dicas de Uso: ${gcam.name}",
             description = "Aprenda a usar todas as funcionalidades desta configuração",
-            author = "Comunidade GCam",
+            user = dev.braian.gcamxmlhub.data.model.User(
+                id = "1",
+                name = "Expert Review",
+                role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                ),
             date = "10/03/2024",
             likes = 89,
 
@@ -63,7 +77,14 @@ fun getFeedContentForGCam(gcam: GCamNames): List<FeedContent> {
             id = "3",
             title = "Comparativo: ${gcam.name} vs Outras GCams",
             description = "Veja como esta GCam se compara com outras do mercado",
-            author = "TechReview",
+            user = dev.braian.gcamxmlhub.data.model.User(
+                id = "1",
+                name = "Expert Review",
+                role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                ),
             date = "05/03/2024",
             likes = 204,
 
@@ -73,7 +94,14 @@ fun getFeedContentForGCam(gcam: GCamNames): List<FeedContent> {
             id = "4",
             title = "Problemas Comuns - ${gcam.name}",
             description = "Soluções para os problemas mais frequentes nesta versão",
-            author = gcam.developer,
+            user = dev.braian.gcamxmlhub.data.model.User(
+                id = "1",
+                name = "Expert Review",
+                role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                ),
             date = "01/03/2024",
             likes = 67,
 
@@ -83,7 +111,15 @@ fun getFeedContentForGCam(gcam: GCamNames): List<FeedContent> {
             id = "5",
             title = "Atualização: ${gcam.name} ${gcam.version}",
             description = "Novidades e melhorias na versão mais recente",
-            author = gcam.developer,
+            user = dev.braian.gcamxmlhub.data.model.User(
+                id = "1",
+                name = "Expert Review",
+                role = dev.braian.gcamxmlhub.data.model.Role.STANDARD,
+                subscription = dev.braian.gcamxmlhub.data.model.Subscription.Basic,
+
+
+                ),
+
             date = "25/02/2024",
             likes = 156,
             
